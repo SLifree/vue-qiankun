@@ -1,0 +1,27 @@
+{
+    "name": "vue-qiankun",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "install": "npm-run-all --serial install:*",
+        "install:main": "cd main && npm install",
+        "install:subapp-demo": "cd subapp-demo && npm install",
+        "install:subapp-demo2": "cd subapp-demo2 && npm install",
+        "start": "npm-run-all --parallel start:*",
+        "start:subapp-demo2": "cd subapp-demo2 && npm run serve",
+        "start:subapp-demo": "cd subapp-demo && npm run serve",
+        "start:main": "cd main && npm run serve",
+        "build": "npm-run-all build:* && bash ./scripts/bundle.sh",
+        "build:main": "cd main && npm run build",
+        "build:subapp-demo": "cd subapp-demo && npm run build",
+        "build:subapp-demo2": "cd subapp-demo2 && npm run build",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "npm-run-all": "^4.1.5"
+    }
+}
